@@ -7,6 +7,9 @@
     <name>Bazy Danych</name>
     <modules>
         <module>bazy-danych.api</module>
+        <module>bazy-danych.api.rest</module>
+        <module>bazy-danych.businness.core</module>
+        <module>bazy-danych.persistence.core</module>
     </modules>
     <packaging>pom</packaging>
     <version>1.0.0</version>
