@@ -47,7 +47,7 @@
             <artifactId>tomcat7-maven-plugin</artifactId>
             <version>2.2</version>
             <configuration>
-                <path>/${project.build.finalName}</path>
+                <path>/logistyka</path>
                 <port>${tomcat.http.port}</port>
                 <uriEncoding>utf-8</uriEncoding>
             </configuration>

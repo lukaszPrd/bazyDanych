@@ -2,6 +2,7 @@ package studia.bazy.danych.logistyka.domain.user.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 import studia.bazy.danych.logistyka.domain.user.model.entity.LoginForm;
 import studia.bazy.danych.logistyka.domain.user.model.entity.RegisterForm;
@@ -22,12 +23,12 @@ public class UserController implements UserApi{
         this.userService = userService;
     }
 
-    @RequestMapping(USER_REGISTER)
+    @RequestMapping(value = USER_REGISTER, method = RequestMethod.POST)
     public void registerUser(@Valid RegisterForm registerForm) {
         userService.registerUser();
     }
 
-    @RequestMapping(USER_LOGIN)
+    @RequestMapping(value = USER_LOGIN, method = RequestMethod.POST)
     public void loginUser(@Valid LoginForm loginForm) {
         userService.loginUser();
     }
