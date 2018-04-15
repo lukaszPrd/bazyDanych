@@ -1,0 +1,16 @@
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://java.sun.com/xml/ns/javaee"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+         version="3.0">
+
+    <display-name>${project.name} ${project.version} GIT@${buildNumber}</display-name>
+
+    <context-param>
+        <param-name>spring.profiles.active</param-name>
+        <param-value>${spring.profiles}</param-value>
+    </context-param>
+
+    <error-page>
+        <location>/error</location>
+    </error-page>
+</web-app>
