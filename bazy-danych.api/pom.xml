@@ -75,6 +75,11 @@
             <artifactId>tomcat-catalina</artifactId>
             <scope>provided</scope>
         </dependency>
+        <dependency>
+            <groupId>studia</groupId>
+            <artifactId>bazy-danych.api</artifactId>
+            <version>1.0.0</version>
+        </dependency>
 
     </dependencies>
 
