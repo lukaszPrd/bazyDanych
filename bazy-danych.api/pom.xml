@@ -14,7 +14,12 @@
     <dependencies>
         <dependency>
             <groupId>studia</groupId>
-            <artifactId>bazy-danych.business.core</artifactId>
+            <artifactId>bazy-danych.persistence</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>studia</groupId>
+            <artifactId>bazy-danych.business</artifactId>
             <version>${project.version}</version>
         </dependency>
         <dependency>

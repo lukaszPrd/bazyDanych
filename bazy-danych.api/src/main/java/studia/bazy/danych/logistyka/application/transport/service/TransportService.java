@@ -26,7 +26,7 @@ public class TransportService implements TransportApi {
 
     @RequestMapping(value = ORDER_CREATE_PATH, method = RequestMethod.POST)
     public void createNewOrder(OrderForm orderForm) {
-
+        consignmentRepository.save();
     }
 
     @RequestMapping(value = CHANGE_STATUS_PATH, method = RequestMethod.POST)
@@ -36,7 +36,7 @@ public class TransportService implements TransportApi {
 
     @RequestMapping(value = GET_STATUS_PATH+"/{id}", method = RequestMethod.GET)
     public ResponseEntity<String> obtainConsignmentStatus(@PathVariable Long id) {
-        return new ResponseEntity<String>(consignmentRepository.toString(), HttpStatus.OK);
+        return new ResponseEntity<String>(consignmentRepository.findById(id), HttpStatus.OK);
     }
 
 }

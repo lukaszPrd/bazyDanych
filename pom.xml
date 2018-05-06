@@ -6,9 +6,11 @@
     <artifactId>bazyDanych</artifactId>
     <name>Bazy Danych</name>
     <modules>
+        <module>bazy-danych.business</module>
         <module>bazy-danych.api</module>
         <module>bazy-danych.persistence</module>
         <module>bazy-danych.webapp</module>
+        <module>bazy-danych.h2</module>
     </modules>
     <packaging>pom</packaging>
     <version>1.0.0</version>
