@@ -1,9 +1,13 @@
 package studia.bazy.danych.logistyka.application;
 
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseBuilder;
+import org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseType;
+
 import javax.sql.DataSource;
 
 @Configuration
-@Profile("H2")
 public class H2MemoryDBConfiguration {
 
     @Bean

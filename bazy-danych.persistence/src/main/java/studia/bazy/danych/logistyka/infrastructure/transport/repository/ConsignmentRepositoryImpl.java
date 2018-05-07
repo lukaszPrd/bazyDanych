@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import studia.bazy.danych.logistyka.domain.transport.model.entity.Consignment;
 
+import javax.persistence.EntityManager;
 import java.util.List;
 
 @Repository

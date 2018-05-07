@@ -1,7 +1,17 @@
 package studia.bazy.danych.logistyka.application;
 
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.orm.jpa.JpaTransactionManager;
+import org.springframework.orm.jpa.JpaVendorAdapter;
+import org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean;
+import org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter;
+
+import javax.persistence.EntityManagerFactory;
 import javax.sql.DataSource;
 import java.util.Properties;
+
+import static org.springframework.orm.jpa.vendor.Database.H2;
 
 @Configuration
 public class H2Configuration {
@@ -24,7 +34,7 @@ public class H2Configuration {
         props.put("hibernate.show_sql", "true");
         bean.setJpaProperties(props);
         bean.setJpaVendorAdapter(jpaVendorAdapter);
-        bean.setPackagesToScan("pl.sagiton.auth.service.domain.user.persistence.studia.bazy.danych.logistyka.domain.transport.model");
+        bean.setPackagesToScan("studia.bazy.danych.logistyka.domain.transport.model");
         return bean;
     }
 

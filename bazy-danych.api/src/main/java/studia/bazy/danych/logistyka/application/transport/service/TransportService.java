@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 import studia.bazy.danych.logistyka.domain.transport.form.OrderForm;
 import studia.bazy.danych.logistyka.domain.transport.form.StatusChangeForm;
+import studia.bazy.danych.logistyka.domain.transport.model.entity.Consignment;
 import studia.bazy.danych.logistyka.infrastructure.transport.repository.ConsignmentRepository;
 
 import static studia.bazy.danych.logistyka.application.transport.service.TransportApi.TRANSPORT_ROOT_PATH;
@@ -26,7 +27,7 @@ public class TransportService implements TransportApi {
 
     @RequestMapping(value = ORDER_CREATE_PATH, method = RequestMethod.POST)
     public void createNewOrder(OrderForm orderForm) {
-        consignmentRepository.save();
+        consignmentRepository.save(new Consignment());
     }
 
     @RequestMapping(value = CHANGE_STATUS_PATH, method = RequestMethod.POST)
@@ -36,7 +37,7 @@ public class TransportService implements TransportApi {
 
     @RequestMapping(value = GET_STATUS_PATH+"/{id}", method = RequestMethod.GET)
     public ResponseEntity<String> obtainConsignmentStatus(@PathVariable Long id) {
-        return new ResponseEntity<String>(consignmentRepository.findById(id), HttpStatus.OK);
+        return new ResponseEntity<String>(consignmentRepository.findById(id).getDeliveryType().name(), HttpStatus.OK);
     }
 
 }
