@@ -13,15 +13,6 @@
 
     <dependencies>
         <dependency>
-            <groupId>studia</groupId>
-            <artifactId>bazy-danych.api</artifactId>
-            <version>${project.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.hibernate</groupId>
-            <artifactId>hibernate-entitymanager</artifactId>
-        </dependency>
-        <dependency>
             <groupId>org.hibernate</groupId>
             <artifactId>hibernate-core</artifactId>
         </dependency>

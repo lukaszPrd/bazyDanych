@@ -50,6 +50,7 @@
                 <path>/logistyka</path>
                 <port>${tomcat.http.port}</port>
                 <uriEncoding>utf-8</uriEncoding>
+                <version>2.2</version>
             </configuration>
         </plugin>
         <plugin>

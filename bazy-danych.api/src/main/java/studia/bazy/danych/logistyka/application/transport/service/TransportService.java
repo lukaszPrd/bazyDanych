@@ -30,14 +30,14 @@ public class TransportService implements TransportApi {
         consignmentRepository.save(new Consignment());
     }
 
-    @RequestMapping(value = CHANGE_STATUS_PATH, method = RequestMethod.POST)
-    public void changeConsignmentStatus(StatusChangeForm statusChangeForm) {
-
-    }
-
     @RequestMapping(value = GET_STATUS_PATH+"/{id}", method = RequestMethod.GET)
     public ResponseEntity<String> obtainConsignmentStatus(@PathVariable Long id) {
         return new ResponseEntity<String>(consignmentRepository.findById(id).getDeliveryType().name(), HttpStatus.OK);
+    }
+
+    @RequestMapping(value = CHANGE_STATUS_PATH, method = RequestMethod.POST)
+    public void changeConsignmentStatus(StatusChangeForm statusChangeForm) {
+
     }
 
 }
