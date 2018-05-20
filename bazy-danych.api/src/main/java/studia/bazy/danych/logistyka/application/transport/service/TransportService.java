@@ -41,4 +41,9 @@ public class TransportService implements TransportApi {
 
     }
 
+    @RequestMapping(value = "/test", method = RequestMethod.GET)
+    public void findall() {
+        System.out.print(consignmentRepository.findAll());
+    }
+
 }

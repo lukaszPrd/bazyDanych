@@ -33,7 +33,7 @@ public class H2Configuration {
         props.put("hibernate.show_sql", "true");
         bean.setJpaProperties(props);
         bean.setJpaVendorAdapter(jpaVendorAdapter);
-        bean.setPackagesToScan("studia.bazy.danych.logistyka.domain.transport.model");
+        bean.setPackagesToScan("studia.bazy.danych.logistyka.domain.transport.model.entity");
         return bean;
     }
 
