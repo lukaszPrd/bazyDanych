@@ -9,8 +9,8 @@
         <module>bazy-danych.business</module>
         <module>bazy-danych.api</module>
         <module>bazy-danych.persistence</module>
-        <module>bazy-danych.webapp</module>
         <module>bazy-danych.h2</module>
+        <module>bazy-danych.boot</module>
     </modules>
     <packaging>pom</packaging>
     <version>1.0.0</version>
@@ -49,6 +49,7 @@
 
         <tomcat.http.port>8090</tomcat.http.port>
         <java-version>1.8</java-version>
+        <application.home>${java.io.tmpdir}/logistyka</application.home>
     </properties>
 
     <dependencyManagement>
