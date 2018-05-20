@@ -2,6 +2,7 @@ package studia.bazy.danych.logistyka.infrastructure.transport.repository;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
+import org.springframework.transaction.annotation.Transactional;
 import studia.bazy.danych.logistyka.domain.transport.model.entity.Consignment;
 import studia.bazy.danych.logistyka.domain.transport.model.valueObject.ConsignmentStatus;
 
@@ -20,6 +21,7 @@ public class ConsignmentRepositoryImpl implements ConsignmentRepository {
     }
 
     @Override
+    @Transactional
     public void save(Consignment consignment) {
         entityManager.persist(consignment);
         entityManager.flush();

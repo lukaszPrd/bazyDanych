@@ -5,6 +5,7 @@ import lombok.NoArgsConstructor;
 import studia.bazy.danych.logistyka.domain.transport.model.valueObject.Address;
 import studia.bazy.danych.logistyka.domain.transport.model.valueObject.ConsignmentStatus;
 import studia.bazy.danych.logistyka.domain.transport.model.valueObject.DeliveryType;
+import studia.bazy.danych.logistyka.domain.transport.model.valueObject.Package;
 
 import java.util.List;
 
@@ -18,4 +19,5 @@ public class Consignment {
     private String comments;
     private ConsignmentStatus status;
     private List<Package> packages;
+
 }

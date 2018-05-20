@@ -40,7 +40,11 @@
             <groupId>com.fasterxml</groupId>
             <artifactId>classmate</artifactId>
         </dependency>
-
+        <dependency>
+            <groupId>org.aspectj</groupId>
+            <artifactId>aspectjweaver</artifactId>
+            <version>1.8.9</version>
+        </dependency>
         <!-- Spring -->
         <dependency>
             <groupId>org.springframework</groupId>

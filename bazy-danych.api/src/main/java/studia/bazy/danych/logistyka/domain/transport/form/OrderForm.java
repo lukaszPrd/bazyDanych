@@ -13,10 +13,10 @@ public class OrderForm {
     @NotEmpty
     private DeliveryType deliveryType;
     @NotEmpty
-    private AddressForm addressFormFrom;
+    private AddressForm addressFrom;
     @NotEmpty
-    private AddressForm addressFormTo;
+    private AddressForm addressTo;
     private String comments;
     @NotEmpty
-    private List<PackageForm> packageForms;
+    private List<PackageForm> packages;
 }
