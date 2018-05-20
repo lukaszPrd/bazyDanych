@@ -5,6 +5,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import studia.bazy.danych.logistyka.application.converter.DozerConverterImpl;
+import studia.bazy.danych.logistyka.domain.common.form.SearchForm;
 import studia.bazy.danych.logistyka.domain.transport.form.OrderForm;
 import studia.bazy.danych.logistyka.domain.transport.form.StatusChangeForm;
 import studia.bazy.danych.logistyka.domain.transport.model.entity.Consignment;
@@ -38,6 +39,12 @@ public class TransportService implements TransportApi {
 
     @RequestMapping(value = CHANGE_STATUS_PATH, method = RequestMethod.POST)
     public void changeConsignmentStatus(StatusChangeForm statusChangeForm) {
+
+    }
+
+    @RequestMapping(value = SEARCH_PATH, method = RequestMethod.POST)
+    public void searchConsignment(SearchForm searchForm) {
+        //TODO
 
     }
 

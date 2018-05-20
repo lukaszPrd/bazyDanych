@@ -9,6 +9,7 @@ public interface TransportApi {
     String CHANGE_STATUS_PATH = "/status/change";
     String GET_STATUS_PATH = "/status/get";
     String ORDER_CREATE_PATH = "/order/create";
+    String SEARCH_PATH = "/search";
     void createNewOrder(OrderForm orderForm);
     void changeConsignmentStatus(StatusChangeForm statusChangeForm);
     ResponseEntity<String> obtainConsignmentStatus(Long id);
