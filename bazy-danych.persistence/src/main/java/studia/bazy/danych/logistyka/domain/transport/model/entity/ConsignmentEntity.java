@@ -23,7 +23,7 @@ public class ConsignmentEntity {
     private DeliveryType deliveryType;
     private String comments;
     private ConsignmentStatus status;
-
+    //TODO start here
 //    @OneToMany(mappedBy="orderItems", cascade = {CascadeType.REMOVE, CascadeType.PERSIST})
 //    private List<ItemEntity> items;
 //    @OneToMany(mappedBy="orderPayments", cascade = {CascadeType.REMOVE, CascadeType.PERSIST})
