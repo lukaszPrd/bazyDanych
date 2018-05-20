@@ -22,4 +22,5 @@ public class PackageEntity {
     @ManyToOne
     @JoinColumn(name="consignment_id")
     private ConsignmentEntity consignmentEntity;
+
 }

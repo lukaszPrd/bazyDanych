@@ -6,9 +6,7 @@ import org.dozer.DozerBeanMapper;
 import org.dozer.loader.api.BeanMappingBuilder;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
-import studia.bazy.danych.logistyka.application.converter.BaseCustomConverter;
 import studia.bazy.danych.logistyka.application.converter.DozerConverterImpl;
 
 import java.util.List;
@@ -18,7 +16,6 @@ import java.util.function.Function;
 import static java.util.stream.Collectors.toMap;
 
 @Configuration
-@ComponentScan(basePackageClasses = BaseCustomConverter.class)
 public class DozerConverterImplConfiguration {
 
     @Bean
@@ -46,15 +43,5 @@ public class DozerConverterImplConfiguration {
 
         return mapper;
     }
-
-//    @Bean
-//    public List<CustomConverter> converters(){
-//        return newArrayList(new EnumToStringConverter());
-//    }
-//
-//    @Bean
-//    public List<BeanMappingBuilder> mappings(){
-//        return newArrayList(new CommonCustomMapping());
-//    }
 
 }
