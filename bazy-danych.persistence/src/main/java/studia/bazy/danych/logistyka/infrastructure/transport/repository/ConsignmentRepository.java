@@ -1,5 +1,6 @@
 package studia.bazy.danych.logistyka.infrastructure.transport.repository;
 
+import studia.bazy.danych.logistyka.domain.transport.model.criteria.ConsignmentSearchCriteria;
 import studia.bazy.danych.logistyka.domain.transport.model.entity.Consignment;
 import studia.bazy.danych.logistyka.domain.transport.model.valueObject.ConsignmentStatus;
 
@@ -10,4 +11,5 @@ public interface ConsignmentRepository {
     List<Consignment> findAll();
     Consignment findById(Long id);
     void editConsignmentStatus(Long id, ConsignmentStatus status);
+    List<Consignment> findBySearchCriteria(ConsignmentSearchCriteria criteria);
 }

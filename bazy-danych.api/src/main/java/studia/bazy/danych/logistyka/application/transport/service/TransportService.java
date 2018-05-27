@@ -8,8 +8,11 @@ import studia.bazy.danych.logistyka.application.converter.DozerConverterImpl;
 import studia.bazy.danych.logistyka.domain.common.form.SearchForm;
 import studia.bazy.danych.logistyka.domain.transport.form.OrderForm;
 import studia.bazy.danych.logistyka.domain.transport.form.StatusChangeForm;
+import studia.bazy.danych.logistyka.domain.transport.model.criteria.ConsignmentSearchCriteria;
 import studia.bazy.danych.logistyka.domain.transport.model.entity.Consignment;
 import studia.bazy.danych.logistyka.infrastructure.transport.repository.ConsignmentRepository;
+
+import java.util.List;
 
 import static studia.bazy.danych.logistyka.application.transport.service.TransportApi.TRANSPORT_ROOT_PATH;
 
@@ -38,19 +41,29 @@ public class TransportService implements TransportApi {
     }
 
     @RequestMapping(value = CHANGE_STATUS_PATH, method = RequestMethod.POST)
-    public void changeConsignmentStatus(StatusChangeForm statusChangeForm) {
+    public void changeConsignmentStatus(@RequestBody StatusChangeForm statusChangeForm) {
 
     }
 
     @RequestMapping(value = SEARCH_PATH, method = RequestMethod.POST)
-    public void searchConsignment(SearchForm searchForm) {
-        //TODO
-
+    public List<OrderForm> searchConsignment(@RequestBody SearchForm searchForm) {
+        ConsignmentSearchCriteria criteria;
+        if(searchForm.getPaginator()!=null){
+            criteria = ConsignmentSearchCriteria.builder().filteringCriteria(searchForm.getFilteringCriteria())
+                    .sortingCriteria(searchForm.getSortingCriteria()).pageNumber(searchForm.getPaginator().getPageNumber())
+                    .pageSize(searchForm.getPaginator().getPageSize()).build();
+        }else{
+            criteria = ConsignmentSearchCriteria.builder().filteringCriteria(searchForm.getFilteringCriteria())
+                    .sortingCriteria(searchForm.getSortingCriteria()).build();
+        }
+        List<Consignment> list = consignmentRepository.findBySearchCriteria(criteria);
+        System.out.print(list);
+        return converter.convert(list, OrderForm.class);
     }
 
     @RequestMapping(value = "/test", method = RequestMethod.GET)
-    public void findall() {
-        System.out.print(consignmentRepository.findAll());
+    public List<OrderForm> findall() {
+        return converter.convert(consignmentRepository.findAll(), OrderForm.class);
     }
 
 }
