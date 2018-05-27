@@ -1,0 +1,158 @@
+{
+	"id": "184225f9-15e4-48f4-9da9-a9faacb778d4",
+	"name": "bazydanych",
+	"description": null,
+	"auth": null,
+	"events": null,
+	"variables": null,
+	"order": [
+		"6de3f642-019f-4ead-b93c-76358fd8d15d",
+		"cd3f0388-afde-4b54-baf3-a2dd0aae4707",
+		"46cb09cc-e73c-4a4c-b72d-722e4f17c44d",
+		"f89c0475-cc6e-4f85-8baf-88c62c21c480"
+	],
+	"folders_order": [],
+	"folders": [],
+	"requests": [
+		{
+			"id": "46cb09cc-e73c-4a4c-b72d-722e4f17c44d",
+			"name": "localhost:8090/transport/status/get/1",
+			"url": "localhost:8090/transport/status/get/1",
+			"description": "",
+			"data": null,
+			"dataMode": "params",
+			"headerData": [],
+			"method": "GET",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": {
+				"basic": [
+					{
+						"key": "password",
+						"value": "a798f3af-ce5c-4b6d-966e-3f84f9ee1022",
+						"type": "string"
+					},
+					{
+						"key": "username",
+						"value": "user",
+						"type": "string"
+					}
+				],
+				"type": "basic"
+			},
+			"events": [],
+			"folder": null,
+			"headers": "",
+			"pathVariables": {}
+		},
+		{
+			"id": "6de3f642-019f-4ead-b93c-76358fd8d15d",
+			"name": "localhost:8090/transport/order/create",
+			"url": "localhost:8090/transport/order/create",
+			"description": "",
+			"data": [],
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": {
+				"basic": [
+					{
+						"key": "password",
+						"value": "afc533c3-3126-47cc-954e-8c4cf28a534f",
+						"type": "string"
+					},
+					{
+						"key": "username",
+						"value": "user",
+						"type": "string"
+					}
+				],
+				"type": "basic"
+			},
+			"events": [],
+			"folder": null,
+			"rawModeData": "{\n\t\"deliveryType\":\"POCZTA\",\n\t\"addressFrom\":{\n\t\t\"name\":\"ddf\"\n\t},\n\t\"addressTo\":{\n\t\t\"surname\":\"de2eed\"\n\t},\n\t\"packages\":[\n\t\t{\n\t\t\t\"height\":12,\n\t\t\t\"width\":11,\n\t\t\t\"weight\":12,\n\t\t\t\"length\":13\n\t\t}\n\t]\n}",
+			"headers": "Content-Type: application/json\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "cd3f0388-afde-4b54-baf3-a2dd0aae4707",
+			"name": "localhost:8090/transport/test",
+			"url": "localhost:8090/transport/test",
+			"description": "",
+			"data": null,
+			"dataMode": "params",
+			"headerData": [],
+			"method": "GET",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": {
+				"basic": [
+					{
+						"key": "password",
+						"value": "8307b622-ba54-4fb0-a15b-e1f40953a16f",
+						"type": "string"
+					},
+					{
+						"key": "username",
+						"value": "user",
+						"type": "string"
+					}
+				],
+				"type": "basic"
+			},
+			"events": [],
+			"folder": null,
+			"headers": "",
+			"pathVariables": {}
+		},
+		{
+			"id": "f89c0475-cc6e-4f85-8baf-88c62c21c480",
+			"name": "localhost:8090/transport/search",
+			"url": "localhost:8090/transport/search",
+			"description": "",
+			"data": [],
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": {
+				"basic": [
+					{
+						"key": "password",
+						"value": "afc533c3-3126-47cc-954e-8c4cf28a534f",
+						"type": "string"
+					},
+					{
+						"key": "username",
+						"value": "user",
+						"type": "string"
+					}
+				],
+				"type": "basic"
+			},
+			"events": [],
+			"folder": null,
+			"rawModeData": "{\n\t\"filteringCriteria\":{\n\t\t\"deliveryType\":\"POCZTA\"\n\t},\n\t\"paginator\":{\n\t\t\"pageSize\":1,\n\t\t\"pageNumber\":0\n\t}\n}",
+			"headers": "Content-Type: application/json\n",
+			"pathVariables": {}
+		}
+	]
+}
